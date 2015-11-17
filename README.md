@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/getopenmono/monoprog.svg)](https://travis-ci.org/getopenmono/monoprog)
+[![GNU/Linux build Status](https://travis-ci.org/getopenmono/appveyor-test-1.svg)](https://travis-ci.org/getopenmono/appveyor-test-1)
+[![Windows build status](https://ci.appveyor.com/api/projects/status/github/getopenmono/appveyor-test-1?svg=true)](https://ci.appveyor.com/project/jpsecher/appveyor-test-1)
 
 # Mono device programmer
 
