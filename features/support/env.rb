@@ -13,7 +13,7 @@ PROJECT_ROOT = File.join(File.dirname(__FILE__),'..','..')
 module ArubaOverrides
   def detect_ruby(cmd)
     processor, platform, *rest = RUBY_PLATFORM.split("-")
-    if platform =~ /w32$/ && cmd =~ /^#{EXE}/
+    if platform =~ /w32$/ && cmd =~ /^monoprog/
       # The application will be located in the build directory.
       ENV['PATH'] = "#{File.expand_path(File.dirname(__FILE__)+'/../../'+RELEASEDIR)};#{ENV['PATH']}"
       # The application will Windows extension.

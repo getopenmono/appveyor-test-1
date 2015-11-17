@@ -3,8 +3,13 @@ os: Windows Server 2012
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 install:
-  - cmd: SET PATH=C:\Qt\5.4;%PATH%
+  - cmd: set PATH=C:\Qt\5.4\msvc2013_opengl\bin;%PATH%
+  - cmd: gem install aruba
 build_script:
-  - compile.bat
+  - setup.bat
+  - run.bat
+test_script:
+  - unittest.bat
+  - acceptancetest.bat
 on_finish:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
